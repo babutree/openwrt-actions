@@ -69,12 +69,12 @@ jobs:
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt
-        make download -j1 V=s
+        make download -j8
         
     - name: Build - make openwrt source
       run: |
         cd openwrt
-        make -j$(nproc)
+        make -j1 V=s
         
     - name: Docker file - copy Docker file
       run: |
