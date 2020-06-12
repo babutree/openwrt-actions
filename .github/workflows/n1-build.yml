@@ -69,7 +69,7 @@ jobs:
     - name: Download - openwrt build dependencies
       run: |
         cd openwrt
-        make download -j8
+        make download -j1 V=s
         
     - name: Build - make openwrt source
       run: |
