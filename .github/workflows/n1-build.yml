@@ -74,7 +74,7 @@ jobs:
     - name: Build - make openwrt source
       run: |
         cd openwrt
-        make -j$(nproc)
+        make -j1 V=s
         
     - name: Docker file - copy Docker file
       run: |
